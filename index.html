@@ -962,34 +962,34 @@
                     document.querySelector('.btn.download').addEventListener('click',
                         () => location.href = url
                     );
-//                     document.querySelector('.btn.quote').addEventListener('click',
-//                         event => {
-//                             previewHandler.copyTextContent(null, window.api.url + '?file=' + path);
-//                             const btn = document.querySelector('.btn.quote');
-//                             btn.innerHTML = '已复制';
-//                             setTimeout(() => btn.innerHTML = '引用', 250);
-//                         }
-//                     );
-                    
-//                     document.querySelector('.btn.share').addEventListener('click',
-//                         event => {
-//                             const sharePath = () => {
-//                                 let arr = window.backFordwardCache.current.split('/');
-//                                 let r = '';
-//                                 for (let i = 1; i < arr.length; i++) {
-//                                     r += '/' + arr[i];
-//                                 }
-//                                 return r;
-//                             }
-//                             previewHandler.copyTextContent(null,
-//                                 window.location.origin +
-//                                 window.location.pathname +
-//                                 '?path=' + sharePath());
-//                             const btn = document.querySelector('.btn.share');
-//                             btn.innerHTML = '已复制';
-//                             setTimeout(() => btn.innerHTML = '分享', 250);
-//                         }
-//                     );
+                    document.querySelector('.btn.quote').addEventListener('click',
+                        event => {
+                            previewHandler.copyTextContent(null, window.api.url + '?file=' + path);
+                            const btn = document.querySelector('.btn.quote');
+                            btn.innerHTML = '已复制';
+                            setTimeout(() => btn.innerHTML = '引用', 250);
+                        }
+                    );
+                 
+                    document.querySelector('.btn.share').addEventListener('click',
+                        event => {
+                            const sharePath = () => {
+                                let arr = window.backFordwardCache.current.split('/');
+                                let r = '';
+                                for (let i = 1; i < arr.length; i++) {
+                                    r += '/' + arr[i];
+                                }
+                                return r;
+                            }
+                            previewHandler.copyTextContent(null,
+                                window.location.origin +
+                                window.location.pathname +
+                                '?path=' + sharePath());
+                            const btn = document.querySelector('.btn.share');
+                            btn.innerHTML = '已复制';
+                            setTimeout(() => btn.innerHTML = '分享', 250);
+                        }
+                    );
                     switchRightDisplay('preview');
 
                     let start = null;
